@@ -1,0 +1,133 @@
+.accessibility {
+    background: $gray;
+    position: relative;
+    top: 100%;
+    z-index: 2000;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    padding-bottom: 0;
+
+    .btn-close {
+        color: $blue;
+        background: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border: 0;
+
+        .fa {
+            margin-right: 5px;
+        }
+    }
+
+    .text-size-options {
+        .radio:nth-child(1) .radio__label {
+            font-size: 1.5rem;
+        }
+
+        .radio:nth-child(2) .radio__label {
+            font-size: 1.3rem;
+        }
+
+        .radio:nth-child(3) .radio__label {
+            font-size: 1rem;
+        }
+    }
+
+    .radio-group__text,
+    .check-group__text,
+    .group-single .title {
+        font-weight: $font-weight-bold;
+        font-size: 1.143rem;
+        margin: 0 0 20px;
+    }
+
+    .groups {
+        display: flex;
+
+        .group-single {
+            flex: 0 1 auto;
+            padding: 20px 40px;
+        }
+
+        .group-single + .group-single {
+            padding-left: 19px;
+            border-left: 1px solid $gray-2;
+        }
+    }
+
+    .styles-list {
+        display: flex;
+    }
+
+    .item-single {
+        width: 120px;
+        cursor: pointer;
+        padding: 5px;
+
+        &.yellow .example {
+            border-color: $yellow !important;
+            background: $black !important;
+        }
+
+        &.yellow .example * {
+            color: $yellow !important;
+        }
+
+        &.blue .example {
+            border-color: $gray !important;
+            background: $blue !important;
+        }
+
+        &.blue .example * {
+            color: $white !important;
+        }
+
+        &.active {
+            background: $blue !important;
+
+            .title {
+                color: $white !important;
+            }
+        }
+    }
+
+    .item-single + .item-single {
+        margin-left: 10px;
+    }
+
+    .example {
+        padding: 5px;
+        border: 2px solid $yellow !important;
+        background: $white !important;
+
+        & > * {
+            background: transparent !important;
+        }
+
+        span {
+            display: block;
+        }
+
+        .heading {
+            font-size: 1.4rem;
+            color: #0072ce !important;
+            font-weight: $font-weight-bold;
+        }
+
+        .text {
+            color: $gray !important;
+            font-size: 1rem;
+        }
+
+        .text2 {
+            font-size: 1.2rem;
+        }
+
+        .title {
+            font-weight: 400;
+            font-size: 1rem;
+            margin-bottom: 0;
+            margin-top: 5px;
+        }
+    }
+}

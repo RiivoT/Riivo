@@ -1,0 +1,139 @@
+@import "../form";
+
+.autocomplete {
+    display: flex;
+    align-items: flex-start;
+}
+
+.autocomplete__input {
+    //.autocomplete:not(.is-multiselect) & {
+    @extend %input;
+    //}
+
+    @extend %placeholder;
+    padding-left: 57px !important;
+    text-overflow: ellipsis;
+
+    .is-multiselect & {
+        width: auto;
+        min-width: 100%;
+        padding-left: 5px !important;
+        padding-top: 9px;
+        padding-bottom: 9px;
+        border: $input-border;
+        border-radius: $input-border-radius;
+        margin-bottom: 10px;
+        margin-right: 20px;
+    }
+
+    .autocomplete--xsmall & {
+        padding-left: 37px !important;
+    }
+}
+
+.autocomplete__control {
+    position: relative;
+    margin-right: 20px;
+    flex: 1 auto;
+
+    .is-multiselect & {
+        @extend %input;
+        padding-top: 10px;
+        padding-bottom: 0;
+        padding-left: 57px;
+        width: 50%;
+    }
+}
+
+.autocomplete__icon {
+    color: $input-color;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+
+    .autocomplete--xsmall & {
+        left: 10px;
+    }
+}
+
+.autocomplete__button {
+    min-width: 100px;
+
+    .autocomplete--medium & {
+        padding-top: $input-padding-m;
+        padding-bottom: $input-padding-m;
+        height: $input-height-m;
+        min-height: $input-height-m;
+
+        &:hover {
+            padding-top: $input-padding-m - 4 !important;
+            padding-bottom: $input-padding-m + 4 !important;
+        }
+    }
+
+    .autocomplete--small & {
+        padding-top: $input-padding-s;
+        padding-bottom: $input-padding-s;
+        height: $input-height-s;
+        min-height: $input-height-s;
+
+        &:hover {
+            padding-top: $input-padding-s - 4 !important;
+            padding-bottom: $input-padding-s + 4 !important;
+        }
+    }
+
+    .autocomplete--xsmall & {
+        padding: $input-padding-xs;
+        height: $input-height-xs;
+        min-height: $input-height-xs;
+
+        &:hover {
+            padding-top: $input-padding-xs - 4 !important;
+            padding-bottom: $input-padding-xs + 4 !important;
+        }
+    }
+}
+
+.autocomplete__list {
+    @extend %input;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    list-style-type: none;
+    position: absolute;
+    background: $white;
+    max-height: 300px;
+    overflow: auto;
+    display: none;
+    left: 0;
+
+    @at-root .is-results & {
+        display: block;
+    }
+
+    li + li {
+        margin-top: 1em;
+    }
+
+    a {
+        text-decoration: none;
+        color: $base-text-color;
+        display: block;
+        line-height: normal;
+
+        &:hover {
+            color: $blue;
+            font-weight: 600;
+        }
+    }
+}
+
+.autocomplete__multiselect {
+    display: none;
+    max-width: 100%;
+
+    .is-multiselect & {
+        display: inline-block;
+    }
+}

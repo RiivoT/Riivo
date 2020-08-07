@@ -1,0 +1,94 @@
+.textarea__input {
+    padding: 19px 20px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    font-size: inherit;
+}
+
+[class*=--medium] .textarea__input {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+[class*=--small] .textarea__input {
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+[class*=--xsmall] .textarea__input {
+    padding: 4px 10px;
+}
+
+.textarea__label {
+    margin-bottom: 16px;
+    display: inline-block;
+}
+
+.textarea__input::placeholder {
+    color: #666666;
+}
+
+.textarea__notice {
+    font-size: 0.77778rem;
+    color: #666666;
+    margin-top: 10px;
+}
+
+.form>*+* {
+    margin-top: 60px;
+}
+
+.textarea {
+    font-size: inherit;
+}
+
+.textarea--inline {
+    display: flex;
+    align-items: baseline;
+}
+
+.is-error .textarea__label {
+    color: #ef3340;
+}
+
+.textarea--inline .textarea__label {
+    margin-right: 20px;
+    text-align: right;
+}
+
+.textarea--inline .textarea__control {
+    flex-grow: 1;
+}
+
+.textarea__input {
+    min-height: 200px;
+    font-family: "Lab Grotesque";
+}
+
+.is-error .textarea__input {
+    border-color: #ef3340;
+}
+
+.textarea--medium .textarea__input {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    min-height: 100px;
+}
+
+.textarea--small .textarea__input {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    min-height: 80px;
+}
+
+.textarea--xsmall .textarea__input {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    min-height: 60px;
+}
+
+.is-error .textarea__notice {
+    color: #ef3340;
+}

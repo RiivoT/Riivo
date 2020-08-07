@@ -1,0 +1,161 @@
+.autocomplete__input, .is-multiselect .autocomplete__control, .autocomplete__list {
+  padding: 19px 20px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  font-size: inherit;
+}
+
+[class*=--medium] .autocomplete__input, [class*=--medium] .is-multiselect .autocomplete__control, .is-multiselect [class*=--medium] .autocomplete__control, [class*=--medium] .autocomplete__list {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+[class*=--small] .autocomplete__input, [class*=--small] .is-multiselect .autocomplete__control, .is-multiselect [class*=--small] .autocomplete__control, [class*=--small] .autocomplete__list {
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+[class*=--xsmall] .autocomplete__input, [class*=--xsmall] .is-multiselect .autocomplete__control, .is-multiselect [class*=--xsmall] .autocomplete__control, [class*=--xsmall] .autocomplete__list {
+  padding: 4px 10px;
+}
+
+.autocomplete__input::placeholder {
+  color: #666666;
+}
+
+.form > * + * {
+  margin-top: 60px;
+}
+
+.autocomplete {
+  display: flex;
+  align-items: flex-start;
+}
+
+.autocomplete__input {
+  padding-left: 57px !important;
+  text-overflow: ellipsis;
+}
+
+.is-multiselect .autocomplete__input {
+  width: auto;
+  min-width: 100%;
+  padding-left: 5px !important;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+.autocomplete--xsmall .autocomplete__input {
+  padding-left: 37px !important;
+}
+
+.autocomplete__control {
+  position: relative;
+  margin-right: 20px;
+  flex: 1 auto;
+}
+
+.is-multiselect .autocomplete__control {
+  padding-top: 10px;
+  padding-bottom: 0;
+  padding-left: 57px;
+  width: 50%;
+}
+
+.autocomplete__icon {
+  color: #333333;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.autocomplete--xsmall .autocomplete__icon {
+  left: 10px;
+}
+
+.autocomplete__button {
+  min-width: 100px;
+}
+
+.autocomplete--medium .autocomplete__button {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  height: 50px;
+  min-height: 50px;
+}
+
+.autocomplete--medium .autocomplete__button:hover {
+  padding-top: 10px !important;
+  padding-bottom: 18px !important;
+}
+
+.autocomplete--small .autocomplete__button {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  height: 40px;
+  min-height: 40px;
+}
+
+.autocomplete--small .autocomplete__button:hover {
+  padding-top: 5px !important;
+  padding-bottom: 13px !important;
+}
+
+.autocomplete--xsmall .autocomplete__button {
+  padding: 4px;
+  height: 30px;
+  min-height: 30px;
+}
+
+.autocomplete--xsmall .autocomplete__button:hover {
+  padding-top: 0px !important;
+  padding-bottom: 8px !important;
+}
+
+.autocomplete__list {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  list-style-type: none;
+  position: absolute;
+  background: #ffffff;
+  max-height: 300px;
+  overflow: auto;
+  display: none;
+  left: 0;
+}
+
+.is-results .autocomplete__list {
+  display: block;
+}
+
+.autocomplete__list li + li {
+  margin-top: 1em;
+}
+
+.autocomplete__list a {
+  text-decoration: none;
+  color: #333333;
+  display: block;
+  line-height: normal;
+}
+
+.autocomplete__list a:hover {
+  color: #0072ce;
+  font-weight: 600;
+}
+
+.autocomplete__multiselect {
+  display: none;
+  max-width: 100%;
+}
+
+.is-multiselect .autocomplete__multiselect {
+  display: inline-block;
+}

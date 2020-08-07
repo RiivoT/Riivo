@@ -1,0 +1,71 @@
+
+.login {
+    &-tabs {
+        .tab__item {
+            a {
+                display: flex;
+                align-items: center;
+
+                i {
+                    margin-right: 5px;
+                    display: inline-block;
+                    width: 1em;
+                    height: 1em;
+                    background-position: center;
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+
+    &-buttons {
+        margin-top: 40px;
+
+        .button + .button {
+            margin-left: 40px;
+        }
+    }
+
+    &-inputs {
+        .textfield {
+            &:not(:first-of-type) {
+                margin-top: 25px;
+            }
+        }
+    }
+}
+
+.textfield {
+    .fa-eye-slash,
+    .fa-eye {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        cursor: pointer;
+    }
+}
+
+.icon {
+    &-password,
+    &-eu-citizen,
+    &-mobiil-id,
+    &-id-card {
+        display: inline-block;
+    }
+}
+
+.icon-password {
+    background: url("../svg/password.svg") no-repeat;
+}
+
+.icon-eu-citizen {
+    background: url("../svg/eu-citizen.svg") no-repeat;
+}
+
+.icon-mobiil-id {
+    background: url("../svg/mobiil-id.svg") no-repeat;
+}
+
+.icon-id-card {
+    background: url("../svg/id-card.svg") no-repeat;
+}

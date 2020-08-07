@@ -1,0 +1,158 @@
+.sub {
+    display: flex;
+    justify-content: flex-end;
+    height: 40px;
+    background: $gray;
+
+    .lang-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+
+        &__item {
+            display: inline;
+            border-right: 1px solid #cccccc;
+            padding: 0 10px;
+
+            &:last-of-type {
+                border-right: none;
+            }
+        }
+
+        &__link {
+            text-transform: uppercase;
+            line-height: 40px;
+            color: $black;
+            text-decoration: none;
+
+            &:hover {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.main,
+.main-navigation {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .logo {
+        height: 100px;
+        width: $left-menu-logo-width;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+
+        &.blue {
+            background: $blue;
+        }
+    }
+
+    .mainmenu {
+        margin-left: 20px;
+    }
+
+    .main-menu {
+        li {
+            display: inline;
+        }
+    }
+
+    .main-buttons {
+        list-style: none;
+        display: flex;
+        margin-left: auto;
+
+        &__item {
+            margin: 0 5px;
+        }
+    }
+
+    &--background:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        left: 0;
+        top: 0;
+        background-image: url("../images/header-background.jpg");
+        background-size: cover;
+        z-index: -1;
+    }
+}
+
+.search-box {
+    display: flex;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    background: $gray;
+
+    input {
+        width: 100%;
+        height: 60px;
+        margin: 20px;
+        border-radius: $input-border-radius;
+        border: solid 1px $black-2;
+        text-indent: 40px;
+    }
+
+    .btn-group {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        button {
+            margin: 0 10px;
+        }
+    }
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper:after {
+    color: $black-8;
+    position: absolute;
+    transform: translate(0,-50%);
+    left: 35px;
+    top: 50%;
+    font-family: "Font Awesome 5 Free";
+    content: "\f002";
+    font-weight: 900;
+}
+//TODO:MOVE these styles to separate file
+
+.page {
+    &__wrapper {
+        min-height: 100vh;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    &__center {
+        height: 100%;
+        flex: 1 1 auto;
+    }
+
+    &__content {
+        padding: 40px 20px;
+        position: relative;
+    }
+
+    &__name {
+        margin-top: 0;
+    }
+}
+
+.esf-logo {
+    background: url("../svg/esf.svg");
+    background-size: cover;
+    width: 127px;
+    height: 73px;
+    flex: 0 0 auto;
+}

@@ -1,0 +1,67 @@
+@import "../form";
+
+.textarea {
+    font-size: inherit;
+
+    &--inline {
+        display: flex;
+        align-items: baseline;
+    }
+}
+
+.textarea__label {
+    @extend %label;
+
+    .is-error & {
+        color: $red;
+    }
+
+    .textarea--inline & {
+        margin-right: 20px;
+        text-align: right;
+    }
+}
+
+.textarea__control {
+    .textarea--inline & {
+        flex-grow: 1;
+    }
+}
+
+.textarea__input {
+    //@include baseInput;
+    @extend %input;
+    @extend %placeholder;
+    min-height: 200px;
+    font-family: $base-font-family;
+
+    .is-error & {
+        border-color: $red;
+    }
+
+    .textarea--medium & {
+        padding-top: $input-padding-m;
+        padding-bottom: $input-padding-m;
+        min-height: 200 * ($input-height-m / 100);
+    }
+
+    .textarea--small & {
+        padding-top: $input-padding-s;
+        padding-bottom: $input-padding-s;
+        min-height: 200 * ($input-height-s / 100);
+    }
+
+    .textarea--xsmall & {
+        padding-top: $input-padding-xs;
+        padding-bottom: $input-padding-xs;
+        min-height: 200 * ($input-height-xs / 100);
+    }
+}
+
+.textarea__notice {
+    @extend %notice;
+
+    .is-error & {
+        color: $red;
+    }
+}

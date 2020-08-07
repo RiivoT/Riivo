@@ -1,0 +1,48 @@
+%input {
+    padding: $input-padding 20px;
+    border: $input-border;
+    border-radius: $input-border-radius;
+    display: block;
+    width: 100%;
+    font-size: inherit;
+
+    [class*=--medium ] & {
+        padding-top: $input-padding-m;
+        padding-bottom: $input-padding-m;
+        //height: $input-height-m;
+    }
+
+    [class*=--small ] & {
+        padding-top: $input-padding-s;
+        padding-bottom: $input-padding-s;
+        //height: $input-height-s;
+    }
+
+    [class*=--xsmall ] & {
+        padding: $input-padding-xs 10px;
+        //height: $input-height-xs;
+    }
+}
+
+%label {
+    margin-bottom: 16px;
+    display: inline-block;
+}
+
+%placeholder {
+    &::placeholder {
+        color: $black-6;
+    }
+}
+
+%notice {
+    font-size: $type-h5;
+    color: $black-6;
+    margin-top: 10px;
+}
+
+.form {
+    > * + * {
+        margin-top: 60px;
+    }
+}

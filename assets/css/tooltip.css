@@ -1,0 +1,76 @@
+[data-tooltip] {
+    display: inline-block;
+}
+
+.tippy-tooltip.tallinn-theme {
+    background-color: #f5f5f5;
+    color: #333333;
+    border-radius: 4px;
+    border: 1px solid #cccccc;
+    padding: 20px;
+}
+
+.tippy-popper .tippy-tooltip.tallinn-theme .tippy-arrow:before {
+    content: "";
+    border: 7px solid transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.tippy-popper[x-placement^=top] .tippy-tooltip.tallinn-theme .tippy-arrow {
+    border-top-color: #cccccc;
+}
+
+.tippy-popper[x-placement^=top] .tippy-tooltip.tallinn-theme .tippy-arrow:before {
+    border-width: 7px 7px 0 7px;
+    border-top-color: #f5f5f5;
+    transform: translate(-7px, -8.5px);
+}
+
+.tippy-popper[x-placement^=bottom] .tippy-tooltip.tallinn-theme .tippy-arrow {
+    border-bottom-color: #cccccc;
+}
+
+.tippy-popper[x-placement^=bottom] .tippy-tooltip.tallinn-theme .tippy-arrow:before {
+    border-width: 0 7px 7px 7px;
+    border-bottom-color: #f5f5f5;
+    transform: translate(-7px, 1.5px);
+}
+
+.tippy-popper[x-placement^=right] .tippy-tooltip.tallinn-theme .tippy-arrow {
+    border-right-color: #cccccc;
+}
+
+.tippy-popper[x-placement^=right] .tippy-tooltip.tallinn-theme .tippy-arrow:before {
+    border-width: 7px 7px 7px 0;
+    border-right-color: #f5f5f5;
+    transform: translate(1.5px, -7px);
+}
+
+.tippy-popper[x-placement^=left] .tippy-tooltip.tallinn-theme .tippy-arrow {
+    border-left-color: #cccccc;
+}
+
+.tippy-popper[x-placement^=left] .tippy-tooltip.tallinn-theme .tippy-arrow:before {
+    border-width: 7px 0 7px 7px;
+    border-left-color: #f5f5f5;
+    transform: translate(-8.5px, -7px);
+}
+
+.tooltip__content {
+    display: none;
+    text-align: left;
+}
+
+.tooltip__content>*:first-child {
+    margin-top: 0;
+}
+
+.tooltip__content>*:last-child {
+    margin-bottom: 0;
+}
+
+.tooltip__icon {
+    color: #0072ce;
+}

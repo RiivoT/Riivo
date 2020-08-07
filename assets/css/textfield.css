@@ -1,0 +1,83 @@
+.textfield__input {
+    padding: 19px 20px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    font-size: inherit;
+}
+
+[class*=--medium] .textfield__input {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+[class*=--small] .textfield__input {
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+[class*=--xsmall] .textfield__input {
+    padding: 4px 10px;
+}
+
+.textfield__label {
+    margin-bottom: 16px;
+    display: inline-block;
+}
+
+.textfield__input::placeholder {
+    color: #666666;
+}
+
+.textfield__notice {
+    font-size: 0.77778rem;
+    color: #666666;
+    margin-top: 10px;
+}
+
+.form>*+* {
+    margin-top: 60px;
+}
+
+.textfield--inline {
+    display: flex;
+    align-items: center;
+}
+
+.is-error .textfield__label {
+    color: #ef3340;
+}
+
+.textfield--inline .textfield__label {
+    margin-right: 20px;
+    text-align: right;
+}
+
+.textfield__control {
+    position: relative;
+}
+
+.textfield--inline .textfield__control {
+    flex-grow: 1;
+}
+
+.textfield__control--tooltip {
+    padding-right: 60px;
+    position: relative;
+}
+
+.textfield__control--tooltip [data-tooltip] {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 20px;
+}
+
+.is-error .textfield__input {
+    border-color: #ef3340;
+}
+
+.is-error .textfield__notice {
+    color: #ef3340;
+}

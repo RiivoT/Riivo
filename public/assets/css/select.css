@@ -1,0 +1,100 @@
+.select__input {
+  padding: 19px 20px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  font-size: inherit;
+}
+
+[class*=--medium] .select__input {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+[class*=--small] .select__input {
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+[class*=--xsmall] .select__input {
+  padding: 4px 10px;
+}
+
+.select__label {
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.select__notice {
+  font-size: 0.77778rem;
+  color: #666666;
+  margin-top: 10px;
+}
+
+.form > * + * {
+  margin-top: 60px;
+}
+
+.select--inline {
+  display: flex;
+  align-items: baseline;
+}
+
+.is-error .select__label {
+  color: #ef3340;
+}
+
+.select--inline .select__label {
+  margin-right: 20px;
+  text-align: right;
+}
+
+.select__control {
+  position: relative;
+}
+
+.select__control:before {
+  content: "";
+  border-style: solid;
+  border-color: #0072ce;
+  transform: rotate(45deg);
+  border-width: 0 1px 1px 0;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.select--medium .select__control:before {
+  top: 18px;
+}
+
+.select--small .select__control:before {
+  top: 13px;
+}
+
+.select--xsmall .select__control:before {
+  top: 8px;
+}
+
+.select__input {
+  background-color: #ffffff;
+  color: #333333;
+  border-radius: 4px;
+  appearance: none;
+  padding: 19px 50px 19px 20px;
+}
+
+.is-error .select__input {
+  border-color: #ef3340;
+}
+
+.select__input::-ms-expand {
+  display: none;
+}
+
+.is-error .select__notice {
+  color: #ef3340;
+}
