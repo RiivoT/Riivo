@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import { forwardRef } from 'react';
 import Grid from '@material-ui/core/Grid'
-
+import Pagination from './components/Pagination';
 import MaterialTable from "material-table";
 import AddBox from '@material-ui/icons/AddBox';
 import ArrowDownward from '@material-ui/icons/ArrowDownward';
@@ -21,6 +21,9 @@ import Search from '@material-ui/icons/Search';
 import ViewColumn from '@material-ui/icons/ViewColumn';
 import axios from 'axios'
 import Alert from '@material-ui/lab/Alert';
+import { Paper } from '@material-ui/core';
+
+
 
 const tableIcons = {
   Add: forwardRef((props, ref) => <AddBox {...props} ref={ref} />),
@@ -47,7 +50,6 @@ const api = axios.create({
 })
 
 
-
 function App() {
 
   var columns = [
@@ -60,10 +62,21 @@ function App() {
     {title: "Nimistu tähis", field: "nimistu_tahis"},
     {title: "Säiliku lisatähis", field: "sailiku_lisatahis"},
     {title: "Kooskõlastuse number", field: "kooskolastuse_nr"},
-    {title: "Daatum", field: "daatum"},
+    {title: "Nimistu tähis", field: "nimistu_tahis"},
+    {title: "Säiliku lisatähis", field: "sailiku_lisatahis"},
+    {title: "Kooskõlastuse number", field: "kooskolastuse_nr"},
+    {title: "Säiliku lisatähis", field: "sailiku_lisatahis"},
+    {title: "Kooskõlastuse number", field: "kooskolastuse_nr"},
+
+    
+
 
   ]
   const [data, setData] = useState([]); //table data
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [dataPerPage] = useState(10);
+  
 
   //for error handling
   const [iserror, setIserror] = useState(false)
@@ -73,6 +86,7 @@ function App() {
     api.get("/posts")
         .then(res => {           
             setData(res.data.posts)
+            setLoading(false);
          })
          .catch(error=>{
              console.log("Error")
@@ -167,10 +181,17 @@ function App() {
       })
   }
 
+   // Get current posts
+ const indexOfLastData = currentPage * dataPerPage;
+ const indexOfFirstData = indexOfLastData - dataPerPage;
+ const currentData = data.slice(indexOfFirstData, indexOfLastData);
+
+ // Change page
+ const paginate = pageNumber => setCurrentPage(pageNumber);   
 
   return (
     <div className="App">
-      <Grid container spacing={1}>
+      <Grid container spacing={0}>
           <Grid item xs={12}></Grid>
           <Grid item xs={12}>
           <div>
@@ -183,7 +204,13 @@ function App() {
             }       
           </div>
             <MaterialTable
-              title="Säilikute andmed"
+            components={{
+              Container: props => <Paper {...props} elevation={0}/>
+              
+         }}
+            options={{
+              showTitle: false,}}
+              
               columns={columns}
               data={data}
               icons={tableIcons}
@@ -204,10 +231,12 @@ function App() {
               }}
             />
           </Grid>
-          <Grid item xs={12}></Grid>
+          <Grid item xs={5}></Grid>
         </Grid>
+
     </div>
   );
 }
 
 export default App;
+
